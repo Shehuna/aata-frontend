@@ -3,7 +3,7 @@ import axios from "axios"
 export const fetchSubcities = async () =>{
       let subcities 
       try {
-        const response = await axios.get("http://localhost:3000/api/subcity", {
+        const response = await axios.get("https://aata-api.vercel.app/api/subcity", {
           headers: {
             "Authorization" : `Bearer ${localStorage.getItem('token')}`
           }
@@ -22,7 +22,7 @@ export const fetchSubcities = async () =>{
   export const fetchTaxTypes = async () =>{
       let taxtypes
       try {
-        const response = await axios.get("http://localhost:3000/api/taxtype", {
+        const response = await axios.get("https://aata-api.vercel.app/api/taxtype", {
           headers: {
             "Authorization" : `Bearer ${localStorage.getItem('token')}`
           }
@@ -41,7 +41,7 @@ export const fetchSubcities = async () =>{
   export const fetchTaxYear = async () =>{
       let taxtyears
       try {
-        const response = await axios.get("http://localhost:3000/api/taxyear", {
+        const response = await axios.get("https://aata-api.vercel.app/api/taxyear", {
           headers: {
             "Authorization" : `Bearer ${localStorage.getItem('token')}`
           }
@@ -60,7 +60,7 @@ export const fetchSubcities = async () =>{
 export const fetchRespondent = async () =>{
       let respondents
       try {
-        const response = await axios.get("http://localhost:3000/api/respondent", {
+        const response = await axios.get("https://aata-api.vercel.app/api/respondent", {
           headers: {
             "Authorization" : `Bearer ${localStorage.getItem('token')}`
           }
@@ -79,7 +79,7 @@ export const fetchRespondent = async () =>{
 export const fetchCategory = async () =>{
       let categories
       try {
-        const response = await axios.get("http://localhost:3000/api/category", {
+        const response = await axios.get("https://aata-api.vercel.app/api/category", {
           headers: {
             "Authorization" : `Bearer ${localStorage.getItem('token')}`
           }
@@ -98,7 +98,7 @@ export const fetchCategory = async () =>{
 export const fetchAppealers = async () =>{
       let appealers
       try {
-        const response = await axios.get("http://localhost:3000/api/appealer", {
+        const response = await axios.get("https://aata-api.vercel.app/api/appealer", {
           headers: {
             "Authorization" : `Bearer ${localStorage.getItem('token')}`
           }
@@ -117,7 +117,7 @@ export const fetchAppealers = async () =>{
   export const fetchUsers = async () =>{
       let users
       try {
-        const response = await axios.get("http://localhost:3000/api/user", {
+        const response = await axios.get("https://aata-api.vercel.app/api/user", {
           headers: {
             "Authorization" : `Bearer ${localStorage.getItem('token')}`
           }

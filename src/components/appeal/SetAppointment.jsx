@@ -41,7 +41,7 @@ const SetAppointment = () => {
       e.preventDefault()
       
       try {
-      const response = await axios.post('http://localhost:3000/api/appointment/add', {
+      const response = await axios.post('https://aata-api.vercel.app/api/appointment/add', {
             appeal,
             user,
             appointmentNo,

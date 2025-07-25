@@ -20,7 +20,7 @@ const AddSubcity = () => {
     useEffect(()=>{
         const fetchSubcity = async () =>{
           try {
-            const response = await axios.get(`http://localhost:3000/api/subcity/${id}`, {
+            const response = await axios.get(`https://aata-api.vercel.app/api/subcity/${id}`, {
               headers: {
                 "Authorization" : `Bearer ${localStorage.getItem('token')}`
               }
@@ -42,7 +42,7 @@ const AddSubcity = () => {
         e.preventDefault()
         if(!isUpdate){
             try {
-            const response = await axios.post('http://localhost:3000/api/subcity/add', subcity, {
+            const response = await axios.post('https://aata-api.vercel.app/api/subcity/add', subcity, {
                 headers: {
                     "Authorization": `Bearer ${localStorage.getItem('token')}`
                 }
@@ -57,7 +57,7 @@ const AddSubcity = () => {
         }
       }else{
          try {
-            const response = await axios.put(`http://localhost:3000/api/subcity/${id}`, subcity, {
+            const response = await axios.put(`https://aata-api.vercel.app/api/subcity/${id}`, subcity, {
                 headers: {
                     "Authorization": `Bearer ${localStorage.getItem('token')}`
                 }

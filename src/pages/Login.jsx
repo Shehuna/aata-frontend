@@ -15,7 +15,7 @@ const Login = () => {
         e.preventDefault()
         try {
             const response = await axios.post(
-                'http://localhost:3000/api/auth/login',
+                'https://aata-api.vercel.app/api/auth/login',
                 {userName, password})
             if(response.data.success){
                 login(response.data.user)

@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 
 
-const hyper = "http://localhost:3000/"
+const hyper = "https://aata-api.vercel.app/"
 
 const ClosedAppealsScree = () => {
   const [decisions, setDecisions] = useState([])
@@ -17,7 +17,7 @@ const ClosedAppealsScree = () => {
     const fetchDecisions = async () =>{
       setIsLoading(true)
       try {
-        const response = await axios.get("http://localhost:3000/api/decision", {
+        const response = await axios.get("https://aata-api.vercel.app/api/decision", {
           headers: {
             "Authorization" : `Bearer ${localStorage.getItem('token')}`
           }

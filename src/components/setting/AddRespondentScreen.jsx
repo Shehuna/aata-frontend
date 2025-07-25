@@ -34,7 +34,7 @@ const AddRespondentScreen = () => {
     useEffect(()=>{
         const fetchRespondent = async () =>{
           try {
-            const response = await axios.get(`http://localhost:3000/api/respondent/${id}`, {
+            const response = await axios.get(`https://aata-api.vercel.app/api/respondent/${id}`, {
               headers: {
                 "Authorization" : `Bearer ${localStorage.getItem('token')}`
               }
@@ -56,7 +56,7 @@ const AddRespondentScreen = () => {
         e.preventDefault()
         if(!isUpdate){
             try {
-            const response = await axios.post('http://localhost:3000/api/respondent/add', respondent, {
+            const response = await axios.post('https://aata-api.vercel.app/api/respondent/add', respondent, {
                 headers: {
                     "Authorization": `Bearer ${localStorage.getItem('token')}`
                 }
@@ -71,7 +71,7 @@ const AddRespondentScreen = () => {
         }
       }else{
          try {
-            const response = await axios.put(`http://localhost:3000/api/respondent/${id}`, respondent, {
+            const response = await axios.put(`https://aata-api.vercel.app/api/respondent/${id}`, respondent, {
                 headers: {
                     "Authorization": `Bearer ${localStorage.getItem('token')}`
                 }

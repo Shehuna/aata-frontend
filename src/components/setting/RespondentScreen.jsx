@@ -21,7 +21,7 @@ const RespondentScreen = () => {
 
   const hadleDelete = async (id) => {
       try {
-        const response = await axios.delete(`http://localhost:3000/api/respondent/${id}`, {
+        const response = await axios.delete(`https://aata-api.vercel.app/api/respondent/${id}`, {
           headers: {
             "Authorization" : `Bearer ${localStorage.getItem('token')}`
           }
@@ -42,7 +42,7 @@ const RespondentScreen = () => {
     const fetchRespondent = async () =>{
       setIsLoading(true)
       try {
-        const response = await axios.get("http://localhost:3000/api/respondent", {
+        const response = await axios.get("https://aata-api.vercel.app/api/respondent", {
           headers: {
             "Authorization" : `Bearer ${localStorage.getItem('token')}`
           }

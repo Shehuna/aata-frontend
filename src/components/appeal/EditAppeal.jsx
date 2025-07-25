@@ -48,7 +48,7 @@ const EditAppealScreen = () => {
   useEffect(()=>{
     const fetchAppeal = async () =>{
       try {
-        const response = await axios.get(`http://localhost:3000/api/appeal/${id}`, {
+        const response = await axios.get(`https://aata-api.vercel.app/api/appeal/${id}`, {
           headers: {
             "Authorization" : `Bearer ${localStorage.getItem('token')}`
           }
@@ -130,7 +130,7 @@ const EditAppealScreen = () => {
     })
 
     try {
-            const response = await axios.put(`http://localhost:3000/api/appeal/${id}`, formDataObj, {
+            const response = await axios.put(`https://aata-api.vercel.app/api/appeal/${id}`, formDataObj, {
                 headers: {
                     "Authorization": `Bearer ${localStorage.getItem('token')}`
                 }

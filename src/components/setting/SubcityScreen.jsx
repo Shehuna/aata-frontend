@@ -21,7 +21,7 @@ const SubcityScreen = () => {
 
   const hadleDelete = async (id) => {
       try {
-        const response = await axios.delete(`http://localhost:3000/api/subcity/${id}`, {
+        const response = await axios.delete(`https://aata-api.vercel.app/api/subcity/${id}`, {
           headers: {
             "Authorization" : `Bearer ${localStorage.getItem('token')}`
           }
@@ -42,7 +42,7 @@ const SubcityScreen = () => {
     const fetchSubcities = async () =>{
       setIsLoading(true)
       try {
-        const response = await axios.get("http://localhost:3000/api/subcity", {
+        const response = await axios.get("https://aata-api.vercel.app/api/subcity", {
           headers: {
             "Authorization" : `Bearer ${localStorage.getItem('token')}`
           }

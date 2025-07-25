@@ -40,7 +40,7 @@ const FileHandoverScreen = () => {
       const fetchAppointments = async () =>{
         setIsLoading(true)
         try {
-          const response = await axios.get("http://localhost:3000/api/appointment", {
+          const response = await axios.get("https://aata-api.vercel.app/api/appointment", {
             headers: {
               "Authorization" : `Bearer ${localStorage.getItem('token')}`
             }
@@ -67,7 +67,7 @@ const FileHandoverScreen = () => {
     const handleSubmit = async (e) => {
       e.preventDefault()
       try {
-            const response = await axios.post('http://localhost:3000/api/handover/add', 
+            const response = await axios.post('https://aata-api.vercel.app/api/handover/add', 
               {
                 handoverFiles, 
                 handoverDate: openDate, 

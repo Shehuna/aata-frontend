@@ -17,7 +17,7 @@ const UserList = () => {
     const fetchUsers = async () =>{
       setIsLoading(true)
       try {
-        const response = await axios.get("http://localhost:3000/api/user", {
+        const response = await axios.get("https://aata-api.vercel.app/api/user", {
           headers: {
             "Authorization" : `Bearer ${localStorage.getItem('token')}`
           }

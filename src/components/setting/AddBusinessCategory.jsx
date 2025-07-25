@@ -20,7 +20,7 @@ const AddBusinessCategory = () => {
     useEffect(()=>{
         const fetchCategory = async () =>{
           try {
-            const response = await axios.get(`http://localhost:3000/api/category/${id}`, {
+            const response = await axios.get(`https://aata-api.vercel.app/api/category/${id}`, {
               headers: {
                 "Authorization" : `Bearer ${localStorage.getItem('token')}`
               }
@@ -42,7 +42,7 @@ const AddBusinessCategory = () => {
         e.preventDefault()
         if(!isUpdate){
             try {
-            const response = await axios.post('http://localhost:3000/api/category/add', category, {
+            const response = await axios.post('https://aata-api.vercel.app/api/category/add', category, {
                 headers: {
                     "Authorization": `Bearer ${localStorage.getItem('token')}`
                 }
@@ -57,7 +57,7 @@ const AddBusinessCategory = () => {
         }
       }else{
          try {
-            const response = await axios.put(`http://localhost:3000/api/category/${id}`, category, {
+            const response = await axios.put(`https://aata-api.vercel.app/api/category/${id}`, category, {
                 headers: {
                     "Authorization": `Bearer ${localStorage.getItem('token')}`
                 }

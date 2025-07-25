@@ -20,7 +20,7 @@ const TaxtypeScreen = () => {
   
     const hadleDelete = async (id) => {
         try {
-          const response = await axios.delete(`http://localhost:3000/api/taxtype/${id}`, {
+          const response = await axios.delete(`https://aata-api.vercel.app/api/taxtype/${id}`, {
             headers: {
               "Authorization" : `Bearer ${localStorage.getItem('token')}`
             }
@@ -41,7 +41,7 @@ const TaxtypeScreen = () => {
       const fetchTaxTypes = async () =>{
         setIsLoading(true)
         try {
-          const response = await axios.get("http://localhost:3000/api/taxtype", {
+          const response = await axios.get("https://aata-api.vercel.app/api/taxtype", {
             headers: {
               "Authorization" : `Bearer ${localStorage.getItem('token')}`
             }

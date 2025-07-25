@@ -92,7 +92,7 @@ const AddAppealScreen = () => {
       formDataObj.append(key, formData[key])
     })
     try {
-            const response = await axios.post('http://localhost:3000/api/appeal/add', formDataObj, {
+            const response = await axios.post('https://aata-api.vercel.app/api/appeal/add', formDataObj, {
                 headers: {
                     "Authorization": `Bearer ${localStorage.getItem('token')}`
                 }

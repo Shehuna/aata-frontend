@@ -16,7 +16,7 @@ const HandoverToPrint = () => {
     })
    useEffect(() => {
         const getAppeals = async () => {
-        const response = await axios.get(`http://localhost:3000/api/appointment/${appealId}`, {
+        const response = await axios.get(`https://aata-api.vercel.app/api/appointment/${appealId}`, {
             headers: {
                 "Authorization" : `Bearer ${localStorage.getItem('token')}`
               }
@@ -35,7 +35,7 @@ const HandoverToPrint = () => {
         const fetchAppointments = async () =>{
           setIsLoading(true)
           try {
-            const response = await axios.get(`http://localhost:3000/api/handover/${id}`, {
+            const response = await axios.get(`https://aata-api.vercel.app/api/handover/${id}`, {
               headers: {
                 "Authorization" : `Bearer ${localStorage.getItem('token')}`
               }

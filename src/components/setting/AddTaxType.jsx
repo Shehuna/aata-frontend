@@ -20,7 +20,7 @@ const AddTaxType = () => {
     useEffect(()=>{
         const fetchTaxType = async () =>{
           try {
-            const response = await axios.get(`http://localhost:3000/api/taxtype/${id}`, {
+            const response = await axios.get(`https://aata-api.vercel.app/api/taxtype/${id}`, {
               headers: {
                 "Authorization" : `Bearer ${localStorage.getItem('token')}`
               }
@@ -42,7 +42,7 @@ const AddTaxType = () => {
         e.preventDefault()
         if(!isUpdate){
             try {
-            const response = await axios.post('http://localhost:3000/api/taxtype/add', taxType, {
+            const response = await axios.post('https://aata-api.vercel.app/api/taxtype/add', taxType, {
                 headers: {
                     "Authorization": `Bearer ${localStorage.getItem('token')}`
                 }
@@ -57,7 +57,7 @@ const AddTaxType = () => {
         }
       }else{
          try {
-            const response = await axios.put(`http://localhost:3000/api/taxtype/${id}`, taxType, {
+            const response = await axios.put(`https://aata-api.vercel.app/api/taxtype/${id}`, taxType, {
                 headers: {
                     "Authorization": `Bearer ${localStorage.getItem('token')}`
                 }

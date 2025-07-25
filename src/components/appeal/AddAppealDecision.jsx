@@ -37,7 +37,7 @@ const AddAppealDecision = () => {
       formDataObj.append(key, formData[key])
     })
     try {
-            const response = await axios.post('http://localhost:3000/api/decision/add', formDataObj, {
+            const response = await axios.post('https://aata-api.vercel.app/api/decision/add', formDataObj, {
                 headers: {
                     "Authorization": `Bearer ${localStorage.getItem('token')}`
                 }

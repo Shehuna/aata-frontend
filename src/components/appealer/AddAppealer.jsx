@@ -34,7 +34,7 @@ const AddAppealer = () => {
     useEffect(()=>{
         const fetchAppealer = async () =>{
           try {
-            const response = await axios.get(`http://localhost:3000/api/appealer/${id}`, {
+            const response = await axios.get(`https://aata-api.vercel.app/api/appealer/${id}`, {
               headers: {
                 "Authorization" : `Bearer ${localStorage.getItem('token')}`
               }
@@ -56,7 +56,7 @@ const AddAppealer = () => {
         e.preventDefault()
         if(!isUpdate){
             try {
-            const response = await axios.post('http://localhost:3000/api/appealer/add', appealer, {
+            const response = await axios.post('https://aata-api.vercel.app/api/appealer/add', appealer, {
                 headers: {
                     "Authorization": `Bearer ${localStorage.getItem('token')}`
                 }
@@ -71,7 +71,7 @@ const AddAppealer = () => {
         }
       }else{
          try {
-            const response = await axios.put(`http://localhost:3000/api/appealer/${id}`, appealer, {
+            const response = await axios.put(`https://aata-api.vercel.app/api/appealer/${id}`, appealer, {
                 headers: {
                     "Authorization": `Bearer ${localStorage.getItem('token')}`
                 }

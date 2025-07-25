@@ -22,7 +22,7 @@ const AddUserScreen = () => {
     useEffect(()=>{
         const fetchUser = async () =>{
           try {
-            const response = await axios.get(`http://localhost:3000/api/user/${id}`, {
+            const response = await axios.get(`https://aata-api.vercel.app/api/user/${id}`, {
               headers: {
                 "Authorization" : `Bearer ${localStorage.getItem('token')}`
               }
@@ -44,7 +44,7 @@ const AddUserScreen = () => {
         e.preventDefault()
         if(!isUpdate){
             try {
-            const response = await axios.post('http://localhost:3000/api/user/add', user, {
+            const response = await axios.post('https://aata-api.vercel.app/api/user/add', user, {
                 headers: {
                     "Authorization": `Bearer ${localStorage.getItem('token')}`
                 }
@@ -59,7 +59,7 @@ const AddUserScreen = () => {
         }
       }else{
          try {
-            const response = await axios.put(`http://localhost:3000/api/user/${id}`, user, {
+            const response = await axios.put(`https://aata-api.vercel.app/api/user/${id}`, user, {
                 headers: {
                     "Authorization": `Bearer ${localStorage.getItem('token')}`
                 }

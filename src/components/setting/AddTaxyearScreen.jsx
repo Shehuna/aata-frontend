@@ -20,7 +20,7 @@ const AddTaxyearScreen = () => {
     useEffect(()=>{
         const fetchTaxYears = async () =>{
           try {
-            const response = await axios.get(`http://localhost:3000/api/taxyear/${id}`, {
+            const response = await axios.get(`https://aata-api.vercel.app/api/taxyear/${id}`, {
               headers: {
                 "Authorization" : `Bearer ${localStorage.getItem('token')}`
               }
@@ -42,7 +42,7 @@ const AddTaxyearScreen = () => {
         e.preventDefault()
         if(!isUpdate){
             try {
-            const response = await axios.post('http://localhost:3000/api/taxyear/add', taxYear, {
+            const response = await axios.post('https://aata-api.vercel.app/api/taxyear/add', taxYear, {
                 headers: {
                     "Authorization": `Bearer ${localStorage.getItem('token')}`
                 }
@@ -57,7 +57,7 @@ const AddTaxyearScreen = () => {
         }
       }else{
          try {
-            const response = await axios.put(`http://localhost:3000/api/taxyear/${id}`, taxYear, {
+            const response = await axios.put(`https://aata-api.vercel.app/api/taxyear/${id}`, taxYear, {
                 headers: {
                     "Authorization": `Bearer ${localStorage.getItem('token')}`
                 }

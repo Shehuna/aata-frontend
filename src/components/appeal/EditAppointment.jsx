@@ -37,7 +37,7 @@ const EditAppointment = () => {
       const handleSubmit = async (e) =>{
           e.preventDefault()
           try {
-            const response = await axios.put(`http://localhost:3000/api/appointment/${appointmentId}`, appointment, {
+            const response = await axios.put(`https://aata-api.vercel.app/api/appointment/${appointmentId}`, appointment, {
                 headers: {
                     "Authorization": `Bearer ${localStorage.getItem('token')}`
                 }
@@ -54,7 +54,7 @@ const EditAppointment = () => {
     useEffect(()=>{
     const fetchAppointment = async () =>{
         try {
-        const response = await axios.get(`http://localhost:3000/api/appointment/${appointmentId}`, {
+        const response = await axios.get(`https://aata-api.vercel.app/api/appointment/${appointmentId}`, {
             headers: {
             "Authorization" : `Bearer ${localStorage.getItem('token')}`
             }

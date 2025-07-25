@@ -21,7 +21,7 @@ const BusinessCategoryScreen = () => {
 
   const hadleDelete = async (id) => {
       try {
-        const response = await axios.delete(`http://localhost:3000/api/category/${id}`, {
+        const response = await axios.delete(`https://aata-api.vercel.app/api/category/${id}`, {
           headers: {
             "Authorization" : `Bearer ${localStorage.getItem('token')}`
           }
@@ -42,7 +42,7 @@ const BusinessCategoryScreen = () => {
     const fetchCategories = async () =>{
       setIsLoading(true)
       try {
-        const response = await axios.get("http://localhost:3000/api/category", {
+        const response = await axios.get("https://aata-api.vercel.app/api/category", {
           headers: {
             "Authorization" : `Bearer ${localStorage.getItem('token')}`
           }

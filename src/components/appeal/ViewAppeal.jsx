@@ -5,7 +5,7 @@ import axios from 'axios'
 import { MdCloudDownload } from "react-icons/md";
 import Loader from '../../utils/Loader'
 
-const hyper = "http://localhost:3000/"
+const hyper = "https://aata-api.vercel.app/"
 const ViewAppeal = () => {
 
   const {id} = useParams()
@@ -75,7 +75,7 @@ const ViewAppeal = () => {
     console.log(updatedAppeal)
 
     try {
-            const response = await axios.put(`http://localhost:3000/api/appeal/${id}`, updatedAppeal, {
+            const response = await axios.put(`https://aata-api.vercel.app/api/appeal/${id}`, updatedAppeal, {
                 headers: {
                     "Authorization": `Bearer ${localStorage.getItem('token')}`
                 }

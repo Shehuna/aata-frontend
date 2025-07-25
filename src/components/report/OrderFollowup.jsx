@@ -16,7 +16,7 @@ const OrderFollowup = () => {
     const fetchAppointments = async () =>{
       setIsLoading(true)
       try {
-        const response = await axios.get("http://localhost:3000/api/appointment", {
+        const response = await axios.get("https://aata-api.vercel.app/api/appointment", {
           headers: {
             "Authorization" : `Bearer ${localStorage.getItem('token')}`
           }

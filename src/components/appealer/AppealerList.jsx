@@ -21,7 +21,7 @@ const AppealerList = () => {
 
   const hadleDelete = async (id) => {
       try {
-        const response = await axios.delete(`http://localhost:3000/api/appealer/${id}`, {
+        const response = await axios.delete(`https://aata-api.vercel.app/api/appealer/${id}`, {
           headers: {
             "Authorization" : `Bearer ${localStorage.getItem('token')}`
           }
@@ -42,7 +42,7 @@ const AppealerList = () => {
     const fetchAppealers = async () =>{
       setIsLoading(true)
       try {
-        const response = await axios.get("http://localhost:3000/api/appealer", {
+        const response = await axios.get("https://aata-api.vercel.app/api/appealer", {
           headers: {
             "Authorization" : `Bearer ${localStorage.getItem('token')}`
           }

@@ -21,7 +21,7 @@ const TaxyearScreen = () => {
 
   const hadleDelete = async (id) => {
       try {
-        const response = await axios.delete(`http://localhost:3000/api/taxyear/${id}`, {
+        const response = await axios.delete(`https://aata-api.vercel.app/api/taxyear/${id}`, {
           headers: {
             "Authorization" : `Bearer ${localStorage.getItem('token')}`
           }
@@ -42,7 +42,7 @@ const TaxyearScreen = () => {
     const fetchTaxYears = async () =>{
       setIsLoading(true)
       try {
-        const response = await axios.get("http://localhost:3000/api/taxyear", {
+        const response = await axios.get("https://aata-api.vercel.app/api/taxyear", {
           headers: {
             "Authorization" : `Bearer ${localStorage.getItem('token')}`
           }

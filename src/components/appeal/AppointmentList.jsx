@@ -23,7 +23,7 @@ const AppointmentList = () => {
     useEffect(()=>{
     const fetchAppeal = async () =>{
       try {
-        const response = await axios.get(`http://localhost:3000/api/appeal/${id}`, {
+        const response = await axios.get(`https://aata-api.vercel.app/api/appeal/${id}`, {
           headers: {
             "Authorization" : `Bearer ${localStorage.getItem('token')}`
           }
@@ -46,7 +46,7 @@ const AppointmentList = () => {
   useEffect(()=>{
     const fetchAppointments = async () =>{
       try {
-        const response = await axios.get(`http://localhost:3000/api/appointment/${id}`, {
+        const response = await axios.get(`https://aata-api.vercel.app/api/appointment/${id}`, {
           headers: {
             "Authorization" : `Bearer ${localStorage.getItem('token')}`
           }
